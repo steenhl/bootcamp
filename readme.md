@@ -1,41 +1,75 @@
-# Git intro opgave
+# Git Intro Opgave
 
-## Opret en mappe som du bruger som project til VC code
-- Opret en index.html fil 
-- Opret en readme.md fil
-## Tilføj git
-- Opret en git fil
-    - git init
-- Skift master til dev
-    - git branch -m dev
-## Tilføj dine tilføjelser  
-- Git Add
-    - git add .
-- Git commit
-    - git commit -m "Besked"
-## Tilknyt dit lokale repository
-- Opret et repository på gitHub
-    - https://github.com/
-    - Øverst til venstre vil der ud for Top repositoris være et knap "New" som oprette et nyt repository
-    - Når du har oprettet dit gitHub repository vil der være to branches, en __main__ og en __dev__ branche 
+## 1. Opret Projektmappe i VS Code
+- Opret en mappe, som skal være dit projekt
+- Inde i mappen:
+    - Opret en `index.html` fil
+    - Opret en `readme.md` fil
 
-- I VS code's terminal tilføj dit gitHub repository
-    - git remote add origin https://github.com/brugernavn/projektnavn.git
-- Git push til dev på GitHub 
-    - git push -u origin dev
-## Bekræft at det virker
-- Gå ind på GitHub
+---
+
+## 2. Initialiser Git i Projektet
+Åbn terminalen i VS Code og kør:
+```bash
+git init
+```
+
+### Skift standard branch til `dev`
+```bash
+git branch -m dev
+```
+
+---
+
+## 3. Første Commit
+Tilføj alle filer og lav første commit:
+```bash
+git add .
+git commit -m "Initial commit"
+```
+
+---
+
+## 4. Opret Repository på GitHub
+- Gå til: [https://github.com](https://github.com)
+- Klik på **New** (øverst til venstre ved "Top Repositories")
+- Opret et repository med samme navn som din mappe
+
+Når du har oprettet repository, kopier linket, fx:
+```bash
+https://github.com/brugernavn/projektnavn.git
+```
+
+---
+
+## 5. Tilknyt Lokalt Repository til GitHub
+Kør følgende i terminalen:
+```bash
+git remote add origin https://github.com/brugernavn/projektnavn.git
+git push -u origin dev
+```
+
+---
+
+## 6. Bekræft at Det Virker
+- Gå til dit repository på GitHub
 - Opdater siden
-- Dine filer burde nu være der
-## Git Flow
-- Tilføj til dit projekt fx. et nyt stykke kode
-    - `git add .` 
-    - `git commit -m "besked"`
-    - `git push -u origin dev`
+- Dine filer fra `dev` branch bør være synlige
 
-## Oprettelse af lokale branch
-Det er en god praksis at oprette en lokal branch for hver ny funtionalitet. Når man er færdig tilføjes ændringerne til den lokale dev
-## Git Branch Oprettelse og Merge - Hurtig Opsummering
+---
+
+## 7. Git Workflow i Hverdagen
+Når du laver ændringer:
+```bash
+git add .
+git commit -m "Beskrivelse af ændringer"
+git push origin dev
+```
+
+---
+
+## 8. Opret Lokale Branches
+Det er god praksis at arbejde i separate branches for ny funktionalitet.
 
 ### Opret Ny Lokal Branch
 ```bash
@@ -48,16 +82,12 @@ git add .
 git commit -m "Beskrivelse af ændringer"
 ```
 
-### Skift Tilbage til `dev` Branch
+### Skift Tilbage til `dev`
 ```bash
 git checkout dev
 ```
-Hvis `dev` ikke findes endnu:
-```bash
-git checkout -b dev
-```
 
-### Merge Ny Branch Ind i `dev`
+### Merge Din Nye Branch Ind i `dev`
 ```bash
 git merge nyBranch
 ```
@@ -67,14 +97,14 @@ git merge nyBranch
 git push origin dev
 ```
 
-### (Valgfrit) Slet Lokal Branch Efter Merge
+### Valgfrit: Slet Lokal Branch Efter Merge
 ```bash
 git branch -d nyBranch
 ```
 
 ---
 
-### Komplet Workflow Eksempel
+## 9. Komplet Eksempel på Workflow
 ```bash
 git checkout -b feature-login
 # Lav ændringer
@@ -88,4 +118,4 @@ git branch -d feature-login
 
 ---
 
-**Bemærk:** Du kan også udføre mange af disse trin via VS Code's Source Control interface, hvis du foretrækker grafisk overblik.
+**Tip:** Mange af disse trin kan også udføres via VS Code's grafiske Source Control menu.
