@@ -1,0 +1,13 @@
+#GIT
+- Opret en git fil
+    -   git init
+- Skift master til dev
+    - git branch -m dev
+- Git Add
+    - git add .
+- Git commit
+    - git commit -m "Initial commit"
+- Tilknyt dit lokale repository
+    - git remote add origin https://github.com/brugernavn/projektnavn.git
+- Git push til dev på GitHub
+    - git push -u origin dev
