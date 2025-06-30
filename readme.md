@@ -16,11 +16,19 @@
 ## Tilknyt dit lokale repository
 - Opret et repository på gitHub
     - https://github.com/
+    - Øverst til venstre vil der ud for Top repositoris være et knap "New" som oprette et nyt repository
+    - Når du har oprettet dit gitHub repository vil der være to branches, en __main__ og en __dev__ branche 
+
 - I VS code's terminal tilføj dit gitHub repository
     - git remote add origin https://github.com/brugernavn/projektnavn.git
-- Git push til dev på GitHub
+- Git push til dev på GitHub 
     - git push -u origin dev
 ## Bekræft at det virker
 - Gå ind på GitHub
 - Opdater siden
 - Dine filer burde nu være der
+## Git Flow
+- Tilføj til dit projekt fx. et nyt stykke kode
+    - `git add .` 
+    - `git commit -m "besked"`
+    - `git push -u origin dev`
