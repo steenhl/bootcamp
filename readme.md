@@ -22,7 +22,7 @@ git branch -m dev
 ---
 
 ## 3. Første Commit
-Tilføj alle filer og lav første commit:
+Tilføj alle filer og lav første commit, samt en beskrivelse
 ```bash
 git add .
 git commit -m "Initial commit"
