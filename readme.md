@@ -125,4 +125,4 @@
 
     ---
 
-    **Tip:** Mange af disse trin kan også udføres via VS Code's grafiske Source Control menu.
+**Tip:** Mange af disse trin kan også udføres via VS Code's grafiske Source Control menu.
